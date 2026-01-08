@@ -26,6 +26,7 @@ debuxo3.translate(200,200)
 # Se añade al contenedor de objetos
 guion.append(debuxo)
 guion.append(debuxo2)
+guion.append(debuxo3)
 
 # Representa el tamaño de una hoja formato A4
 folla = Drawing(A4[0], A4[1])
