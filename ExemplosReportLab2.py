@@ -13,6 +13,8 @@ imaxe2 = Image(60,100,32,32,"box-pixilart.png")
 debuxo = Drawing(300,32)
 debuxo2 = Drawing(300,102)
 debuxo3 = Drawing()
+debuxo4 = Drawing()
+
 # Añade la imagen al cuadro
 debuxo.add(imaxe)
 
@@ -23,10 +25,15 @@ debuxo3.add(imaxe)
 debuxo3.rotate(33)
 debuxo3.translate(200,200)
 
+debuxo4.add(imaxe)
+debuxo4.translate(400, 400)
+debuxo4.scale(0.5,0.5)
+
 # Se añade al contenedor de objetos
 guion.append(debuxo)
 guion.append(debuxo2)
 guion.append(debuxo3)
+guion.append(debuxo4)
 
 # Representa el tamaño de una hoja formato A4
 folla = Drawing(A4[0], A4[1])
