@@ -46,7 +46,7 @@ for tipo_letra in obxCanvas.getAvailableFonts():
 obxTexto.setTextOrigin(20,800)
 #obxTexto.setFillColorRGB(0.2, 0, 0.6) # Otra forma de poner color al texto
 obxTexto.setFillColor('pink',1) # En vez de poner color con números se pone con nombre
-obxTexto.setFont('Helvetica-BoldOblique',16)
+obxTexto.setFont('Helvetica-BoldOblique',12)
 for linha in texto:
     obxTexto.moveCursor(20,15)
     obxTexto.textOut(linha)
@@ -58,6 +58,10 @@ for linha in texto:
     obxTexto.textLine("Espazo %s: %s:" % (espazoCaracteres,linha))
     espazoCaracteres += 1
 
+obxTexto.setTextOrigin(20, 550)
+obxTexto.setCharSpace(1)
+obxTexto.setWordSpace(8)
+obxTexto.textLines(textoLongo)
 
 # Pinta el texto por pantalla (ambos textos)
 obxCanvas.drawText(obxTexto)
