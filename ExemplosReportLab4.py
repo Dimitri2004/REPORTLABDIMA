@@ -1,5 +1,5 @@
 # Doc con Platypus
-
+from reportlab.lib.colors import Color
 from reportlab.platypus import Paragraph
 from reportlab.platypus import Image
 from reportlab.platypus import SimpleDocTemplate
@@ -12,7 +12,7 @@ from reportlab.rl_settings import showBoundary
 guion = []
 
 follaEstilo = getSampleStyleSheet()
-
+print(follaEstilo.list())
 cabeceira = follaEstilo["Heading4"]
 
 cabeceira.pageBreakBefore = 0
@@ -32,5 +32,16 @@ guion.append(Spacer(0,30))
 imaxe = Image("box-pixilart.png",width=400,height=400)
 guion.append(imaxe)
 
+cabeceiraCursiva = follaEstilo["Heading4"]
+cabeceiraCursiva.fontName = 'Helvetica-Oblique'
+cabeceiraCursiva.fontSize = 18
+cabeceiraCursiva.alignment = 1
+cabeceiraCursiva.borderColor = colors.blue
+
+paragrafo3 = Paragraph("Cabezeira cursiva", cabeceiraCursiva)
+guion.append(paragrafo3)
+
 doc = SimpleDocTemplate("4º ExemplosPlatypus.pdf", pagesize = A4,showBoundary = 1)
 doc.build(guion)
+
+
