@@ -13,7 +13,7 @@ from reportlab.platypus import Table
 
 imaxe = Image("box-pixilart.png",width=23,height=23)
 texto = Paragraph("Libre")
-h = ['HORARIO']<
+h = ['HORARIO']
 cab = ['-','Luns','Martes','Mercores','Xoves','Venres','Sabado','Domingo']
 actM = ['Mañán',"Cole","Correr",[imaxe,texto],'-','-','Estudar','Traballar']
 actT =['Tarde','Trabalar','Clases','Clases','Clases','Traballar','Traballar','Ler']
